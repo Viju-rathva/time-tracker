@@ -112,3 +112,6 @@
     margin-bottom: 0.5rem;
   }
   
+  .footer-note {
+    display: none;
+  }

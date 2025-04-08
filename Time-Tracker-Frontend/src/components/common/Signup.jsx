@@ -109,7 +109,7 @@ export const Signup = () => {
         <div className="signup-container">
             <ToastContainer position="top-center" autoClose={2000} theme="light" transition={Bounce} />
             <div className="signup-box">
-                <h2 style={{ background: "#D0DDD0", color:"#5A6E58",padding: "10px", borderRadius: "10px" }}>{role} Registration</h2>
+                <h2 style={{ background: "#5A6E58", color:"white",padding: "10px", borderRadius: "10px" }}>{role} Registration</h2>
                 <form onSubmit={handleSubmit(onSubmit)} autoComplete="off">
                     <input type="text" placeholder="First Name" {...register("firstName", { required: "First name is required" })} />
                     {errors.firstName && <p className="error">{errors.firstName.message}</p>}
@@ -159,6 +159,9 @@ export const Signup = () => {
                     </button>
                 </form>
             </div>
+            <div className="footer-note">
+            © {new Date().getFullYear()} Time Tracker. All rights reserved.
+        </div>
         </div>
     //     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50 flex items-center justify-center p-4">
     //     <ToastContainer position="top-center" autoClose={2000} theme="light" transition={Bounce} />
