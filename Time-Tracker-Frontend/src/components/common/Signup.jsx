@@ -109,7 +109,12 @@ export const Signup = () => {
         <div className="signup-container">
             <ToastContainer position="top-center" autoClose={2000} theme="light" transition={Bounce} />
             <div className="signup-box">
-                <h2 style={{ background: "#5A6E58", color:"white",padding: "10px", borderRadius: "10px" }}>{role} Registration</h2>
+                <div className="signup-header">
+                    <h2 className="signup-title" >{role} Registration</h2>
+
+                </div>
+                
+                
                 <form onSubmit={handleSubmit(onSubmit)} autoComplete="off">
                     <input type="text" placeholder="First Name" {...register("firstName", { required: "First name is required" })} />
                     {errors.firstName && <p className="error">{errors.firstName.message}</p>}

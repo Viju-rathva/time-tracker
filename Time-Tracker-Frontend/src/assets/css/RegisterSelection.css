@@ -5,11 +5,13 @@
     justify-content: center;
     height: 100vh;
     width: 100vw;
-    background: linear-gradient(to bottom, #AAB99A);
+    /* background: linear-gradient(to bottom, #AAB99A); */
+    background: linear-gradient(to bottom right, #ebf4ff, #eef2ff);
+
 }
 
 h2 {
-    color: #AAB99A;
+    color: #5A6E58;
     font-size: 2em;
     margin-bottom: 20px;
 }
@@ -31,10 +33,10 @@ h2 {
     border-radius: 20px;
     font-size: 1.2em;
     font-weight: bold;
-    color: white;
+    color: #5A6E58;
     cursor: pointer;
     transition: transform 0.3s ease, background 0.3s ease;
-    box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .admin, .developer, .project-manager {
