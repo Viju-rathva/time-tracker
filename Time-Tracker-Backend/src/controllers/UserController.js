@@ -145,7 +145,7 @@ const forgotPassword = async (req, res) => {
           <a href="${url}" style="background-color: #AAB99A; color: white; padding: 10px 15px; text-decoration: none; border-radius: 5px;">Reset Password</a>
         </p>
         <p style="color: #999; font-size: 14px;">If you didn’t request a password reset, you can ignore this email.</p>
-        <p style="color: #999; font-size: 14px;">This link will expire in 15 minutes.</p>
+        <p style="color: red; font-size: 14px;">This link will expire in 15 minutes.</p>
       </div>
     `;
 

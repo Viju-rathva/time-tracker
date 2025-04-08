@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useParams, useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
-import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { FaEye, FaEyeSlash, FaTimes } from 'react-icons/fa';
 import 'react-toastify/dist/ReactToastify.css';
 
 export const ResetPassword = () => {
@@ -40,7 +40,9 @@ export const ResetPassword = () => {
   return (
     <div className="login-container">
       <div className="login-box">
+      <FaTimes className="close-icon" onClick={() => navigate("/login")} />
         <label>Reset Password</label>
+        <p className="subtext">Enter and confirm your new password below.</p>
         <form onSubmit={handleSubmit(submitHandler)}>
           <div className="password-container">
             <input
@@ -74,7 +76,7 @@ export const ResetPassword = () => {
 
       {/* Internal CSS placed at the end */}
       <style>{`
-        .login-container {
+             .login-container {
           display: flex;
           justify-content: center;
           align-items: center;
@@ -92,17 +94,24 @@ export const ResetPassword = () => {
           max-width: 90%;
           padding: 30px;
           background-color: #D0DDD0;
-          border-radius: 50px 50px 10px 10px;
+          border-radius: 1rem;
           box-shadow: 5px 20px 50px rgba(0, 0, 0, 0.3);
           text-align: center;
+          position: relative;
         }
 
         .login-box label {
           font-size: 1.8em;
           font-weight: bold;
-          color: white;
-          margin-bottom: 20px;
+          color: #5A6E58;
+          margin-bottom: 10px;
           display: block;
+        }
+
+        .subtext {
+          font-size: 0.95em;
+          margin-bottom: 15px;
+          color: #444;
         }
 
         .login-box input {
@@ -119,19 +128,10 @@ export const ResetPassword = () => {
           width: 100%;
         }
 
-        .password-container input {
-          width: 100%;
-          padding: 12px;
-          padding-right: 40px;
-          border: 1px solid #ddd;
-          border-radius: 30px;
-          font-size: 1em;
-        }
-
         .eye-icon {
           position: absolute;
           right: 15px;
-          top: 50%;
+          top: 45%;
           transform: translateY(-50%);
           cursor: pointer;
           color: #333;
@@ -141,7 +141,7 @@ export const ResetPassword = () => {
         .login-box button {
           width: 100%;
           padding: 12px;
-          background: #AAB99A;
+          background: #5A6E58;
           color: #fff;
           border: solid 1px #AAB99A;
           border-radius: 30px;
@@ -151,13 +151,27 @@ export const ResetPassword = () => {
         }
 
         .login-box button:hover {
-          background: #D0DDD0;
+          background: #5A6E58;
+        }
+
+        .login-box button:disabled {
+          background-color: #999;
+          cursor: not-allowed;
         }
 
         .error {
           color: red;
           font-size: 12px;
           margin-top: 5px;
+        }
+
+        .close-icon {
+          position: absolute;
+          top: 15px;
+          right: 20px;
+          font-size: 20px;
+          color: #5A6E58;
+          cursor: pointer;
         }
 
         @media screen and (max-width: 480px) {
@@ -180,6 +194,7 @@ export const ResetPassword = () => {
             padding: 10px;
           }
         }
+
       `}</style>
     </div>
   );
