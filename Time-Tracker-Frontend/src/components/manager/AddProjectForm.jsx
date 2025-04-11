@@ -149,7 +149,8 @@ export const AddProjectForm = () => {
 // Internal Styles
 const styles = {
     main: {
-        backgroundColor: '#AAB99A', 
+        // backgroundColor: '#AAB99A', 
+        backgroundColor: "#F5F7F5",
         padding: '50px',
         margin: '20px', 
         borderRadius: '10px', 
@@ -191,9 +192,10 @@ const styles = {
         fontSize: '12px',
     },
     button: {
-        backgroundColor: '#D0DDD0',
+        // backgroundColor: '#D0DDD0',
+        backgroundColor: "#5A6E58",
         borderColor: '#AAB99A',
-        color: '#333',
+        color: '#fff',
         padding: '10px 20px',
         borderRadius: '5px',
         cursor: 'pointer',

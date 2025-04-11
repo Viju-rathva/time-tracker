@@ -58,7 +58,7 @@ const ModulesList = () => {
             <TableBody>
               {modules.map(module => (
                 <TableRow key={module._id} hover>
-                  <TableCell>{module.moduleName || "No Name"}</TableCell>
+                  <TableCell><b>{module.moduleName || "No Name"}</b></TableCell>
                   <TableCell>{module.description || "No Description"}</TableCell>
                   <TableCell>{module.estimatedHours || "N/A"} hrs</TableCell>
                   <TableCell>{module.startDate ? new Date(module.startDate).toLocaleDateString("en-GB") : "N/A"}</TableCell>

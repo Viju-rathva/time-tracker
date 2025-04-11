@@ -110,6 +110,7 @@ const TaskAssignment = () => {
                     <Table style={styles.table}>
                         <TableHead style={styles.tableHeader}>
                             <TableRow>
+                                {/* <TableCell><b>Project Name</b></TableCell> */}
                                 <TableCell><b>Module Name</b></TableCell>
                                 <TableCell><b>Task Name</b></TableCell>
                                 <TableCell><b>Description</b></TableCell>
@@ -132,6 +133,7 @@ const TaskAssignment = () => {
                                                         {module.moduleName}
                                                     </TableCell>
                                                 )}
+                                                {/* <TableCell>{task.projectId || "No Title"}</TableCell> */}
                                                 <TableCell>{task.title || "No Title"}</TableCell>
                                                 <TableCell>{task.description || "No Description"}</TableCell>
                                                 <TableCell>{task.priority || "N/A"}</TableCell>
@@ -193,7 +195,7 @@ const styles = {
         display: "flex",
         justifyContent: "center",
         alignItems: "flex-start",
-        padding: "20px",
+        // padding: "20px",
         overflowX: "hidden",
     },
     tableContainer: {
@@ -203,7 +205,7 @@ const styles = {
         borderRadius: "10px",
         boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
         padding: "20px",
-        backgroundColor: "#AAB99A",
+        backgroundColor: "#F5F7F5",
     },
     heading: {
         textAlign: "center",
@@ -231,7 +233,7 @@ const styles = {
     },
     moduleCell: {
         fontWeight: "bold",
-        backgroundColor: "#AAB99A",
+        backgroundColor: "#F5F7F5",
         verticalAlign: "top",
     },
     assignButton: {

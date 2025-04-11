@@ -174,7 +174,7 @@ const styles = {
         overflowX: "hidden",
         overflowY: "auto",
         padding: "20px",
-        backgroundColor: "#AAB99A",
+        backgroundColor: "#F5F7F5",
     },
     heading: {
         textAlign: "center",
@@ -189,8 +189,8 @@ const styles = {
         borderRadius: "5px",
     },
     button: {
-        backgroundColor: "#D0DDD0",
-        color: "#333",
+        backgroundColor: "#5A6E58",
+        color: "white",
         borderRadius: "5px",
         transition: "background-color 0.3s",
         marginRight: "10px",

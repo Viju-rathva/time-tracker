@@ -39,10 +39,10 @@ export const ManagerNavbar = ({ toggleSidebar }) => {
         <button
           className="btn"
           style={{
-            backgroundColor: "#AAB99A",
+            backgroundColor: "#A6C1A2",
             color: "white",
             padding: "11px 22px",
-            borderRadius: "73px",
+            borderRadius: "0.75rem",
             fontWeight: "bold",
             border: "none",
             transition: "background-color 0.3s, color 0.3s",
@@ -50,10 +50,10 @@ export const ManagerNavbar = ({ toggleSidebar }) => {
           onClick={handleLogout}
           onMouseEnter={(e) => {
             e.target.style.backgroundColor = "white";
-            e.target.style.color = "#AAB99A";
+            e.target.style.color = "#A6C1A2";
           }}
           onMouseLeave={(e) => {
-            e.target.style.backgroundColor = "#AAB99A";
+            e.target.style.backgroundColor = "#A6C1A2";
             e.target.style.color = "white";
           }}
         >

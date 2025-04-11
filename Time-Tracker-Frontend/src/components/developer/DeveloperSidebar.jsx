@@ -24,13 +24,16 @@ export const DeveloperSidebar = () => {
     <>
       <style>{`
         .nav-link.active-link {
-          background-color: #D0DDD0 !important;
+          background-color: #4B5C4A !important;
           color: #5A6E58 !important;
           font-weight: bold;
           border-radius: 5px;
           width: 93%;
           display: block;
           box-sizing: border-box;
+        }
+          .app-sidebar {
+          background-color: #5A6E58 !important;
         }
       `}</style>
 

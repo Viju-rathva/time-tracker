@@ -157,7 +157,7 @@ const styles = {
     padding: "20px",
     borderRadius: "10px",
     boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
-    backgroundColor: "#AAB99A",
+    backgroundColor: "#F5F7F5",
   },
   heading: {
     margin: "20px 0",

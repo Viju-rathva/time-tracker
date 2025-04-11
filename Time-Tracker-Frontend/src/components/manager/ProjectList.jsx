@@ -67,7 +67,7 @@ const ProjectList = () => {
             <TableBody>
               {Array.isArray(projects) && projects.map((project) => (
                 <TableRow key={project._id} hover>
-                  <TableCell>{project.title || "No Title"}</TableCell>
+                  <TableCell><b>{project.title || "No Title"}</b></TableCell>
                   <TableCell>{project.description || "No Description"}</TableCell>
                   <TableCell>{project.technology || "No Tech"}</TableCell>
                   <TableCell>{project.estimatedHours || "N/A"} hrs</TableCell>
@@ -122,6 +122,8 @@ const styles = {
     boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
     overflowX: "hidden", 
     overflowY: "auto", 
+    backgroundColor: "#F5F7F5",
+
   },
   heading: {
     textAlign: "center",

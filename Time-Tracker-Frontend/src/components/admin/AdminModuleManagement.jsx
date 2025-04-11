@@ -119,7 +119,7 @@ const AdminModuleManagement = () => {
               {filteredModules.length > 0 ? (
                 filteredModules.map((mod) => (
                   <TableRow key={mod._id}>
-                    <TableCell>{mod.moduleName}</TableCell>
+                    <TableCell><b>{mod.moduleName}</b></TableCell>
                     <TableCell>{mod.projectId?.title || "N/A"}</TableCell>
                     <TableCell>
                       <IconButton color="error" onClick={() => handleDeleteModule(mod._id)}>

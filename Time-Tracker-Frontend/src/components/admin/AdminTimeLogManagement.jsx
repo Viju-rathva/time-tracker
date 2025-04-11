@@ -167,7 +167,7 @@ const AdminTimeLogManagement = () => {
               {filteredLogs.length > 0 ? (
                 filteredLogs.map((log) => (
                   <TableRow key={log._id}>
-                    <TableCell>{log.taskId?.title} ({log.taskId?.description})</TableCell>
+                    <TableCell><b>{log.taskId?.title} ({log.taskId?.description})</b></TableCell>
                     <TableCell>{log.taskId?.moduleId?.projectId?.title || "N/A"}</TableCell>
                     <TableCell>{formatDateTime(log.startDate)}</TableCell>
                     <TableCell>{log.endDate ? formatDateTime(log.endDate) : "-"}</TableCell>

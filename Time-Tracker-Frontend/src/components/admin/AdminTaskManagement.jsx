@@ -120,7 +120,7 @@ const AdminTaskManagement = () => {
               {filteredTasks.length > 0 ? (
                 filteredTasks.map((task) => (
                   <TableRow key={task._id}>
-                    <TableCell>{`${task.title} (${task.description || "No Description"})`}</TableCell>
+                    <TableCell><b>{`${task.title} (${task.description || "No Description"})`}</b></TableCell>
                     <TableCell>{task.moduleId?.projectId?.title || "N/A"}</TableCell>
                     <TableCell>{task.priority || "N/A"}</TableCell>
                     <TableCell>{task.statusId?.name || "N/A"}</TableCell>

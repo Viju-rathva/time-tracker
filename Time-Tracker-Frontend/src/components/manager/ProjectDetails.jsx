@@ -191,8 +191,8 @@ const styles = {
         padding: "10px",
     },
     button: {
-        backgroundColor: '#D0DDD0',
-        color: '#333',
+        backgroundColor: "#5A6E58",
+        color: 'white',
         borderRadius: "5px",
         transition: "background-color 0.3s",
         marginRight: "10px"

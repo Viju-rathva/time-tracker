@@ -132,7 +132,7 @@ const AdminUserManagement = () => {
 
                 return (
                   <TableRow key={user._id}>
-                    <TableCell>{user.firstName} {user.lastName}</TableCell>
+                    <TableCell><b>{user.firstName} {user.lastName}</b></TableCell>
                     <TableCell>{user.email}</TableCell>
                     <TableCell>
                       <Select

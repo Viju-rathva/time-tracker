@@ -258,7 +258,7 @@ const AdminBilling = () => {
               <TableBody>
                 {billings.map((bill) => (
                   <TableRow key={bill._id}>
-                    <TableCell>{bill.userId?.firstName} {bill.userId?.lastName}</TableCell>
+                    <TableCell><b>{bill.userId?.firstName} {bill.userId?.lastName}</b></TableCell>
                     <TableCell>{bill.projectId?.title}</TableCell>
                     <TableCell>{bill.totalHour} hrs</TableCell>
                     <TableCell>₹{bill.hourlyPrice}</TableCell>

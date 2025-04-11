@@ -183,6 +183,7 @@ const styles = {
     flex: 1,
     width: "100%",
     maxWidth: "calc(100vw - 40px)",
+    
   },
   heading: {
     margin: "20px",

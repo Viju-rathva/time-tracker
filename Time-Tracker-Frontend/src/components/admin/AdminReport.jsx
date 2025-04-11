@@ -284,7 +284,7 @@ const AdminReport = () => {
               <TableBody>
                 {reports.map((r) => (
                   <TableRow key={r._id}>
-                    <TableCell>{r.userId?.firstName} {r.userId?.lastName}</TableCell>
+                    <TableCell><b>{r.userId?.firstName} {r.userId?.lastName}</b></TableCell>
                     <TableCell>{r.projectId?.title}</TableCell>
                     <TableCell>{r.taskId?.title} ({r.taskId?.description || "-"})</TableCell>
                     <TableCell>{r.totalHour} hrs</TableCell>

@@ -18,17 +18,13 @@ export const AdminNavbar = ({ toggleSidebar }) => {
 
   return (
     <>
-
-    {/* <style>{`
-     .app-header navbar {
-      background-color: #7D8F79 !important;
-
-     }
-    `}
-      
-    </style> */}
-    <nav className="app-header navbar navbar-expand bg-body"   
-      >
+    <style>{`
+    .app-header navbar{
+       background-color: #4B5C4A !important;
+    }
+    `}</style>
+    
+    <nav className="app-header navbar navbar-expand bg-body"  >
       {/*begin::Container*/}
       <div className="container-fluid d-flex justify-content-between">
         {/*begin::Start Navbar Links*/}
@@ -51,9 +47,10 @@ export const AdminNavbar = ({ toggleSidebar }) => {
           className="btn"
           style={{
             backgroundColor: "#A6C1A2",
+            
             color: "white",
             padding: "11px 22px",
-            borderRadius: "73px",
+            borderRadius: "0.75rem",
             fontWeight: "bold",
             border: "none",
             transition: "background-color 0.3s, color 0.3s",
@@ -61,10 +58,10 @@ export const AdminNavbar = ({ toggleSidebar }) => {
           onClick={handleLogout}
           onMouseEnter={(e) => {
             e.target.style.backgroundColor = "white";
-            e.target.style.color = "#AAB99A";
+            e.target.style.color = "#A6C1A2";
           }}
           onMouseLeave={(e) => {
-            e.target.style.backgroundColor = "#AAB99A";
+            e.target.style.backgroundColor = "#A6C1A2";
             e.target.style.color = "white";
           }}
         >

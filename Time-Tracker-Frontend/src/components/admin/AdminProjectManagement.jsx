@@ -108,7 +108,7 @@ const AdminProjectManagement = () => {
               {filteredProjects.length > 0 ? (
                 filteredProjects.map((proj) => (
                   <TableRow key={proj._id}>
-                    <TableCell>{proj.title}</TableCell>
+                    <TableCell><b>{proj.title}</b></TableCell>
                     <TableCell>{proj.description}</TableCell>
                     <TableCell>{proj.technology || "N/A"}</TableCell>
                     <TableCell>{proj.statusId?.name || "N/A"}</TableCell>
