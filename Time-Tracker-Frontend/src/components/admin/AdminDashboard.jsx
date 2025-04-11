@@ -265,7 +265,8 @@ const styles = {
     },
     chartCard: {
         padding: "20px",
-        backgroundColor: "#D0DDD0",
+        // backgroundColor: "#D0DDD0",
+        backgroundColor: "#F5F7F5",
         borderRadius: "12px",
         height: "100%",
     },

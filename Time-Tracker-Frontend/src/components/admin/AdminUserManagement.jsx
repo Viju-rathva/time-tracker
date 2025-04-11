@@ -184,7 +184,7 @@ const styles = {
     width: "100%",
     maxWidth: "calc(100vw - 40px)",
     padding: "20px",
-    backgroundColor: "#AAB99A",
+    backgroundColor: "#F5F7F5",
     borderRadius: "10px",
   },
   heading: {
@@ -204,12 +204,13 @@ const styles = {
   },
   select: {
     marginBottom: "15px",
-    backgroundColor: "#fff",
+    backgroundColor: "#F5F7F5",
     borderRadius: "5px",
-    padding: "8px 12px",
+    // padding: "8px 12px",
+    width:"100%"
   },
   roleSelect: {
-    backgroundColor: "#fff",
+    backgroundColor: "#F5F7F5",
     borderRadius: "5px",
     width: "100%",
   },

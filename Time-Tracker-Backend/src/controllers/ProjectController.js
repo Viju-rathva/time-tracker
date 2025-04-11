@@ -69,4 +69,27 @@ const deleteProject = async (req, res) => {
     }
 };
 
-module.exports = { addProject, getProjects, getProjectById, updateProject, deleteProject };
+const getAllProjectsByUserId = async (req, res)=>{
+
+    try {
+        const projects = await Project.find({userId:req.params.userId}).populate("user");
+        if (projects.length === 0 ){
+            res.status(404).json({
+                message:"NO Projects Found"
+            });
+        } else {
+            res.status(200).json({
+                message: "Projects found successfully",
+                data:projects
+            });
+        }
+    } catch (err) {
+        res.status(500).json({
+            message: err.message
+        });
+    }
+
+
+};
+
+module.exports = { addProject, getProjects, getProjectById, updateProject, deleteProject,getAllProjectsByUserId };

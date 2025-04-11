@@ -169,7 +169,8 @@ const styles = {
     width: "100%",
     maxWidth: "calc(100vw - 40px)",
     padding: "20px",
-    backgroundColor: "#AAB99A",
+    // backgroundColor: "white",
+    backgroundColor: "#F5F7F5",
     borderRadius: "10px",
   },
   tableHeader: {

@@ -357,7 +357,7 @@ const styles = {
     flexDirection: "column",
     gap: "15px",
     margin: "0 auto",
-    backgroundColor: "#AAB99A",
+    backgroundColor: "#F5F7F5",
     padding: "20px",
     borderRadius: "10px",
   },

@@ -17,7 +17,18 @@ export const AdminNavbar = ({ toggleSidebar }) => {
   };
 
   return (
-    <nav className="app-header navbar navbar-expand bg-body">
+    <>
+
+    {/* <style>{`
+     .app-header navbar {
+      background-color: #7D8F79 !important;
+
+     }
+    `}
+      
+    </style> */}
+    <nav className="app-header navbar navbar-expand bg-body"   
+      >
       {/*begin::Container*/}
       <div className="container-fluid d-flex justify-content-between">
         {/*begin::Start Navbar Links*/}
@@ -39,7 +50,7 @@ export const AdminNavbar = ({ toggleSidebar }) => {
         <button
           className="btn"
           style={{
-            backgroundColor: "#AAB99A",
+            backgroundColor: "#A6C1A2",
             color: "white",
             padding: "11px 22px",
             borderRadius: "73px",
@@ -62,5 +73,6 @@ export const AdminNavbar = ({ toggleSidebar }) => {
       </div>
       {/*end::Container*/}
     </nav>
+    </>
   );
 };

@@ -24,18 +24,21 @@ export const AdminSidebar = () => {
     <>
       <style>{`
         .nav-link.active-link {
-          background-color: #D0DDD0 !important;
-          color: #5A6E58 !important;
+          background-color: #4B5C4A !important;
+          color: #D0DDD0 !important;
           font-weight: bold;
           border-radius: 5px;
           width: 93%;
           display: block;
           box-sizing: border-box;
         }
+         .app-sidebar {
+          background-color: #5A6E58 !important;
+        }
       `}</style>
 
       <AdminNavbar toggleSidebar={toggleSidebar} />
-      <aside
+      <aside 
         className={`app-sidebar bg-body-secondary shadow ${isSidebarOpen ? "open" : "d-none"
           }`}
       >
