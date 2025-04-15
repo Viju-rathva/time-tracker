@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Clock, BarChart2, Calendar, Users, ChevronDown, ChevronUp, Menu, X, Facebook, Twitter, Instagram, Linkedin, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 // Custom Tailwind colors applied through inline styles
 const colors = {
@@ -23,17 +24,17 @@ export default function LandingPage() {
     {
       title: "Track Your Time, Boost Your Productivity",
       subtitle: "Effortlessly manage your time with our intuitive tracking app. Know exactly where your hours go and optimize your workflow.",
-      backgroundImage: "/api/placeholder/1800/900?text=Time+Tracking+Dashboard",
+      backgroundImage: "src/assets/Carousal1.jpg",
     },
     {
       title: "Detailed Reports & Analytics",
       subtitle: "Visualize your productivity patterns with beautiful charts and insightful reports that help you make better decisions.",
-      backgroundImage: "/api/placeholder/1800/900?text=Analytics+Dashboard",
+      backgroundImage: "src/assets/Carousal2.jpg",
     },
     {
       title: "Seamless Team Collaboration",
       subtitle: "Keep your entire team in sync with collaborative time tracking, shared projects, and permission-based insights.",
-      backgroundImage: "/api/placeholder/1800/900?text=Team+Collaboration",
+      backgroundImage: "src/assets/Carousal3.jpg",
     }
   ];
 
@@ -80,30 +81,30 @@ export default function LandingPage() {
         <div className="container mx-auto flex justify-between items-center">
           <div className="flex items-center">
             <Clock className="text-white mr-2" size={28} />
-            <span className="text-white font-bold text-xl">TimeTrack</span>
+            <span className="text-white font-bold text-xl">Time Tracker</span>
           </div>
           
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#features" className="text-white hover:text-gray-200">Features</a>
-            <a href="#about" className="text-white hover:text-gray-200">About</a>
-            <a href="#testimonials" className="text-white hover:text-gray-200">Testimonials</a>
-            <a href="#faq" className="text-white hover:text-gray-200">FAQ</a>
-            <button 
-              className="px-4 py-2 rounded-md text-white font-medium"
+            <a href="#features" className="no-underline text-white hover:text-gray-200">Features</a>
+            <a href="#about" className="no-underline text-white hover:text-gray-200">About</a>
+            <a href="#testimonials" className="no-underline text-white hover:text-gray-200">Testimonials</a>
+            <a href="#faq" className=" no-underline text-white hover:text-gray-200">FAQ</a>
+            <Link to={"/login"}
+              className="no-underline px-4 py-2 rounded-md text-white font-medium"
               style={{ backgroundColor: colors.darkGreen }}
               onMouseOver={e => e.currentTarget.style.opacity = '0.9'}
               onMouseOut={e => e.currentTarget.style.opacity = '1'}
             >
               Sign In
-            </button>
-            <button 
-              className="px-4 py-2 rounded-md text-white font-medium border-2 border-white"
+            </Link>
+            <Link  to={"/signup"}
+              className="no-underline px-4 py-2 rounded-md text-white font-medium border-2 border-white"
               onMouseOver={e => e.currentTarget.style.backgroundColor = colors.darkGreen}
               onMouseOut={e => e.currentTarget.style.backgroundColor = 'transparent'}
             >
               Sign Up
-            </button>
+            </Link>
           </div>
           
           {/* Mobile menu button */}
@@ -152,7 +153,7 @@ export default function LandingPage() {
               className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out
                 ${index === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
               style={{ 
-                backgroundImage: `linear-gradient(rgba(90, 110, 88, 0.85), rgba(79, 95, 78, 0.9)), url(${slide.backgroundImage})`,
+                backgroundImage: `linear-gradient(rgba(90, 110, 88, 0.55), rgba(79, 95, 78, 0.9)), url(${slide.backgroundImage})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
               }}
@@ -246,7 +247,7 @@ export default function LandingPage() {
             </div>
             <div className="md:w-1/2 flex justify-center">
               <div className="rounded-lg shadow-xl overflow-hidden max-w-md">
-                <img src="/api/placeholder/600/400" alt="Time tracking interface" className="w-full" />
+                <img src="src\assets\admin-report.png" alt="Time tracking interface" className="w-full" />
               </div>
             </div>
           </div>
@@ -274,7 +275,7 @@ export default function LandingPage() {
             </div>
             <div className="md:w-1/2 flex justify-center">
               <div className="rounded-lg shadow-xl overflow-hidden max-w-md">
-                <img src="/api/placeholder/600/400" alt="Analytics dashboard" className="w-full" />
+                <img src="src\assets\manager reoprt.png" alt="Analytics dashboard" className="w-full" />
               </div>
             </div>
           </div>
@@ -302,7 +303,7 @@ export default function LandingPage() {
             </div>
             <div className="md:w-1/2 flex justify-center">
               <div className="rounded-lg shadow-xl overflow-hidden max-w-md">
-                <img src="/api/placeholder/600/400" alt="Team collaboration" className="w-full" />
+                <img src="src\assets\manager reoprt.png" alt="Team collaboration" className="w-full" />
               </div>
             </div>
           </div>
@@ -356,8 +357,8 @@ export default function LandingPage() {
         <div className="container mx-auto">
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 mb-8 md:mb-0">
-              <div className="rounded-lg overflow-hidden shadow-xl">
-                <img src="/api/placeholder/600/600" alt="About TimeTrack" className="w-full" />
+              <div className=" rounded-lg overflow-hidden shadow-xl">
+                <img src="src\assets\about-img.png.webp" alt="About TimeTrack" className="w-full" />
               </div>
             </div>
             <div className="md:w-1/2 md:pl-12">
@@ -456,7 +457,7 @@ export default function LandingPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 md:px-8 text-center" style={{ backgroundColor: colors.primaryGreen }}>
+      {/* <section className="py-16 px-4 md:px-8 text-center" style={{ backgroundColor: colors.darkGreen }}>
         <div className="container mx-auto max-w-3xl">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
             Ready to Take Control of Your Time?
@@ -474,7 +475,7 @@ export default function LandingPage() {
           </button>
           <p className="mt-4 text-white text-sm">No credit card required. Cancel anytime.</p>
         </div>
-      </section>
+      </section> */}
 
       {/* Footer */}
       <footer className="py-12 px-4 md:px-8" style={{ backgroundColor: colors.darkGreen }}>
@@ -483,24 +484,24 @@ export default function LandingPage() {
             <div>
               <div className="flex items-center mb-4">
                 <Clock className="text-white mr-2" size={24} />
-                <span className="text-white font-bold text-xl">TimeTrack</span>
+                <span className="text-white font-bold text-xl">Time Tracker</span>
               </div>
-              <p className="text-sm mb-4" style={{ color: colors.lightGreen }}>
+              <p className="text-sm mb-4" style={{ color: colors.textcolor }}>
                 The simple way to track your time and boost your productivity.
               </p>
               <div className="flex space-x-4">
-                <a href="#" className="text-white hover:text-gray-200">
+                <Link to="https://www.facebook.com/share/1LDao2PNnK/" className="text-white hover:text-gray-200">
                   <Facebook size={20} />
-                </a>
-                <a href="#" className="text-white hover:text-gray-200">
+                </Link>
+                <Link to="https://x.com/home" className="text-white hover:text-gray-200">
                   <Twitter size={20} />
-                </a>
-                <a href="#" className="text-white hover:text-gray-200">
+                </Link>
+                <Link to="https://www.instagram.com/viju__rathwa/" className="text-white hover:text-gray-200">
                   <Instagram size={20} />
-                </a>
-                <a href="#" className="text-white hover:text-gray-200">
+                </Link>
+                <Link to="https://www.linkedin.com/in/viju-rathva-6a08492b6/" className="text-white hover:text-gray-200">
                   <Linkedin size={20} />
-                </a>
+                </Link>
               </div>
             </div>
             
@@ -509,7 +510,7 @@ export default function LandingPage() {
               <ul className="space-y-2">
                 {['Features', 'Pricing', 'Integrations', 'Changelog'].map((item, index) => (
                   <li key={index}>
-                    <a href="#" className="text-sm hover:text-white" style={{ color: colors.lightGreen }}>
+                    <a href="#" className="text-sm hover:text-white" style={{ color: colors.textcolor }}>
                       {item}
                     </a>
                   </li>
@@ -522,7 +523,7 @@ export default function LandingPage() {
               <ul className="space-y-2">
                 {['Blog', 'Documentation', 'Guides', 'API Reference'].map((item, index) => (
                   <li key={index}>
-                    <a href="#" className="text-sm hover:text-white" style={{ color: colors.lightGreen }}>
+                    <a href="#" className="text-sm hover:text-white" style={{ color: colors.textcolor }}>
                       {item}
                     </a>
                   </li>
@@ -535,7 +536,7 @@ export default function LandingPage() {
               <ul className="space-y-2">
                 {['About Us', 'Careers', 'Contact', 'Privacy Policy'].map((item, index) => (
                   <li key={index}>
-                    <a href="#" className="text-sm hover:text-white" style={{ color: colors.lightGreen }}>
+                    <a href="#" className="text-sm hover:text-white" style={{ color: colors.textcolor }}>
                       {item}
                     </a>
                   </li>
@@ -546,7 +547,7 @@ export default function LandingPage() {
           
           <div className="pt-8 border-t border-gray-600 text-center">
             <p className="text-sm" style={{ color: colors.textcolor }}>
-              © {new Date().getFullYear()} TimeTrack. All rights reserved.
+              © {new Date().getFullYear()} Time Tracker. All rights reserved.
             </p>
           </div>
         </div>
